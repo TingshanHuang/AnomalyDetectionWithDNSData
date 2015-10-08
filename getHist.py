@@ -1,4 +1,5 @@
 from scapy.all import *
+<<<<<<< HEAD
 import sys
 ## TO DO: FILTER THE DOMAIN NAMES
 #ifilename="dns_00000_20150717150532.pcap"
@@ -150,3 +151,11 @@ for x in y.keys():
 #dictRDomain={} # domain names of responses
 
 
+=======
+from scapy.layers.dns import DNSRR, DNS, DNSQR
+
+ifilename = 'a.pcap'
+pkts=rdpcap(ifilename)
+for p in pkts:
+	print p.summary()
+>>>>>>> 7f7a9b3ac721e20b9c0ba880190e4721cce9645b
