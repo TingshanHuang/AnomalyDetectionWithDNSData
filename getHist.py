@@ -9,7 +9,7 @@ except:
 	sys.exit()
 
 ## read packets
-pkts=rdpcap(ifilename+'.pcap', 1000)
+pkts=rdpcap(ifilename+'.pcap')
 
 ## get frequency
 dictQSrcIP={} # source IP addresses of queries
@@ -75,8 +75,8 @@ y = dictQSrcIP
 g = open('dictQSrcIP'+arg[1]+'.txt','w')
 f = open('freqQSrcIP'+arg[1]+'.txt','w')
 for x in y.keys():
-	print "%d, %d" %(index,y[x])
-	print "%s, %d" %(x,y[x])
+	#print "%d, %d" %(index,y[x])
+	#print "%s, %d" %(x,y[x])
 	f.write("%d %d\n" %(index,y[x]))
 	g.write("%s %d\n" %(x,y[x]))
 	index=index+1
@@ -85,8 +85,8 @@ y = dictQDstIP
 g = open('dictQDstIP'+arg[1]+'.txt','w')
 f = open('freqQDstIP'+arg[1]+'.txt','w')
 for x in y.keys():
-	print "%d, %d" %(index,y[x])
-	print "%s, %d" %(x,y[x])
+	#print "%d, %d" %(index,y[x])
+	#print "%s, %d" %(x,y[x])
 	f.write("%d %d\n" %(index,y[x]))
 	g.write("%s %d\n" %(x,y[x]))
 	index=index+1
@@ -95,8 +95,8 @@ y = dictRSrcIP
 g = open('dictRSrcIP'+arg[1]+'.txt','w')
 f = open('freqRSrcIP'+arg[1]+'.txt','w')
 for x in y.keys():
-	print "%d, %d" %(index,y[x])
-	print "%s, %d" %(x,y[x])
+	#print "%d, %d" %(index,y[x])
+	#print "%s, %d" %(x,y[x])
 	f.write("%d %d\n" %(index,y[x]))
 	g.write("%s %d\n" %(x,y[x]))
 	index=index+1
@@ -105,8 +105,8 @@ y = dictRDstIP
 g = open('dictRDstIP'+arg[1]+'.txt','w')
 f = open('freqRDstIP'+arg[1]+'.txt','w')
 for x in y.keys():
-	print "%d, %d" %(index,y[x])
-	print "%s, %d" %(x,y[x])
+	#print "%d, %d" %(index,y[x])
+	#print "%s, %d" %(x,y[x])
 	f.write("%d %d\n" %(index,y[x]))
 	g.write("%s %d\n" %(x,y[x]))
 	index=index+1
@@ -115,8 +115,8 @@ y = dictQDomain
 g = open('dictQDomain'+arg[1]+'.txt','w')
 f = open('freqQDomain'+arg[1]+'.txt','w')
 for x in y.keys():
-	print "%d, %d" %(index,y[x])
-	print "%s, %d" %(x,y[x])
+	#print "%d, %d" %(index,y[x])
+	#print "%s, %d" %(x,y[x])
 	f.write("%d %d\n" %(index,y[x]))
 	g.write("%s %d\n" %(x,y[x]))
 	index=index+1
@@ -125,8 +125,8 @@ y = dictRDomain
 g = open('dictRDomain'+arg[1]+'.txt','w')
 f = open('freqRDomain'+arg[1]+'.txt','w')
 for x in y.keys():
-	print "%d, %d" %(index,y[x])
-	print "%s, %d" %(x,y[x])
+	#print "%d, %d" %(index,y[x])
+	#print "%s, %d" %(x,y[x])
 	f.write("%d %d\n" %(index,y[x]))
 	g.write("%s %d\n" %(x,y[x]))
 	index=index+1
